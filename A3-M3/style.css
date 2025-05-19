@@ -1,0 +1,28 @@
+#listaDesordenada{
+    background-color: purple;
+    list-style: none;
+    width: 33%;
+}
+
+.colorName{
+    color: orange;
+}
+
+input{
+    border-radius: 10px;
+    padding: 3px 0 0 10px;
+    box-shadow: 3px 3px 0 0 rgb(149, 84, 84);
+}
+
+#btn-add{
+    border-radius: 6px;
+    margin-left: 10px;
+    padding: 1px 30px;
+    transition: 0.3s ease-out;
+}
+
+#btn-add:hover{
+    background-color: rgba(32, 216, 32, 0.833);
+    color: yellow;
+    transform: scale(1.1)
+}
