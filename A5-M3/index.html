@@ -9,7 +9,14 @@
 <body>
     <input id="input-name" type="text" placeholder="digite o nome do anime">
     <input id="input-power" type="text" placeholder="digite o poder do anime">
-    <input id="input-img" type="text" placeholder="digite o caminho da imagem do anime">
+    <select id="imageSelect">
+        <option value="">Selecione uma imagem</option>
+        <option value="doubleTwo.png">Imagem 1 - Double Two</option>
+        <option value="naruto.png">Imagem 2 - Naruto</option>
+        <option value="rickAndMorty.png">Imagem 3 - Rick and Morty</option>
+    </select>
+
+    <img id="imagePreview" src="" alt="Pré-visualização" width="200">
 
     <button id="btn-add">adicionar anime</button>
     <div>
