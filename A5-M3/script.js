@@ -40,15 +40,7 @@ botaoAdicionar.addEventListener('click', function () {
   })
 })
 
-const frutas = ['maça', 'banana', 'maracuja'];
-const novasFrutas = frutas.map(fruta => `transformei ${fruta} em suco`);
-console.log(novasFrutas);
 
-frutas.filter(fruta => {
-   if(fruta === 'banana'){
-      console.log(`transformei ${fruta} em suco`)
-   }
-})
 
 const createItem = (name, img, power) => {
   const liItem = document.createElement('li'); //criando uma tag li
