@@ -1,5 +1,5 @@
 
-
+export const somar = (a,b) => a + b;
 class Anime {
     constructor(name, img, power){
         this.name = name;
@@ -8,62 +8,64 @@ class Anime {
     }
 }
 
-// armazenando as tags do HTML em variaveis
-const inputNameAnime = document.getElementById("input-name"); 
-const inputPowerAnime = document.getElementById("input-power"); 
-const inputImgAnime = document.getElementById("input-img"); 
+export const listProducts = [{nome: "bala", price: 30}, {nome: "bolo", price: 12}]
 
-const listaAnimes = [];
-const ulAnimes = document.getElementById('animesList');
-const botaoAdicionar = document.getElementById('btn-add');
+// // armazenando as tags do HTML em variaveis
+// const inputNameAnime = document.getElementById("input-name"); 
+// const inputPowerAnime = document.getElementById("input-power"); 
+// const inputImgAnime = document.getElementById("input-img"); 
 
-const preview = document.getElementById('imagePreview');
+// const listaLivros = [];
+// const ulAnimes = document.getElementById('animesList');
+// const botaoAdicionar = document.getElementById('btn-add');
 
-document.getElementById('imageSelect').addEventListener('change', function() {
-        // this - meu 
-    const selectedImage = this.value;
+// // const preview = document.getElementById('imagePreview');
 
-    if (selectedImage) {
-        preview.src = selectedImage;
-    } else {
-        preview.src = '';
-    }
-});
+// // document.getElementById('imageSelect').addEventListener('change', function() {
+// //         // this - meu 
+// //     const selectedImage = this.value;
 
-botaoAdicionar.addEventListener('click', function () {
-  const item = new Anime(inputNameAnime.value,preview.src, inputPowerAnime.value);
-  listaAnimes.push(item);
-  ulAnimes.innerHTML = ''; //apagando a lista atual para recria la com os novos valores
-  // {name: 'tenis', price: '$250'}
-  listaAnimes.map(({ name, img, power }) => { //pega todos os itens do array e cria um novo array
-    createItem(name, img, power);
-  })
-})
+// //     if (selectedImage) {
+// //         preview.src = selectedImage;
+// //     } else {
+// //         preview.src = '';
+// //     }
+// // });
 
-const frutas = ['maça', 'banana', 'maracuja'];
-const novasFrutas = frutas.map(fruta => `transformei ${fruta} em suco`);
-console.log(novasFrutas);
+// botaoAdicionar.addEventListener('click', function () {
+//   const item = new Anime(inputNameAnime.value,preview.src, inputPowerAnime.value);
+//   listaLivros.push(item);
+//   ulAnimes.innerHTML = ''; //apagando a lista atual para recria la com os novos valores
+//   // {name: 'tenis', price: '$250'}
+//   listaLivros.map(({ name, img, power }) => { //pega todos os itens do array e cria um novo array
+//     createItem(name, img, power);
+//   })
+// })
 
-frutas.filter(fruta => {
-   if(fruta === 'banana'){
-      console.log(`transformei ${fruta} em suco`)
-   }
-})
+// const frutas = ['maça', 'banana', 'maracuja'];
+// const novasFrutas = frutas.map(fruta => `transformei ${fruta} em suco`);
+// console.log(novasFrutas);
 
-const createItem = (name, img, power) => {
-  const liItem = document.createElement('li'); //criando uma tag li
-  const textItem = document.createElement('p');
-  const imgItem = document.createElement('img');
+// frutas.filter(fruta => {
+//    if(fruta === 'banana'){
+//       console.log(`transformei ${fruta} em suco`)
+//    }
+// })
 
-  textItem.innerText = `O nome do anime é ${name} e seu poder é ${power}`; //adicionar um texto para a tag
-  imgItem.src = img;
+// const createItem = (name, img, power) => {
+//   const liItem = document.createElement('li'); //criando uma tag li
+//   const textItem = document.createElement('p');
+//   const imgItem = document.createElement('img');
 
-  liItem.appendChild(textItem);
-  liItem.appendChild(imgItem);
+//   textItem.innerText = `O nome do anime é ${name} e seu poder é ${power}`; //adicionar um texto para a tag
+//   imgItem.src = img;
+
+//   liItem.appendChild(textItem);
+//   liItem.appendChild(imgItem);
   
-  ulAnimes.appendChild(liItem); // adicionando a tag à lista
-  document.body.appendChild(ulAnimes);
-}
+//   ulAnimes.appendChild(liItem); // adicionando a tag à lista
+//   document.body.appendChild(ulAnimes);
+// }
 
 
 
